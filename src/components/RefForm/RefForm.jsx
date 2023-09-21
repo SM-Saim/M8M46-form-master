@@ -1,9 +1,13 @@
-import { useRef } from "react";
+import { useEffect, useRef } from "react";
 
 const RefForm = () => {
   const nameRef = useRef(null);
   const emailRef = useRef(null);
   const passwordRef = useRef(null);
+
+  useEffect(() => {
+    nameRef.current.focus();
+  }, []);
 
   const handleSubmit = (e) => {
     e.preventDefault();
