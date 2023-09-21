@@ -1,11 +1,11 @@
 import Pet from "../Pet/Pet";
 
-const MySelf = () => {
+const MySelf = ({ asset }) => {
   return (
     <div>
       <h2>My Self</h2>
       <section className="flex">
-        <Pet></Pet>
+        <Pet asset={asset}></Pet>
       </section>
     </div>
   );
