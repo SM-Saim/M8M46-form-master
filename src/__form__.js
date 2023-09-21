@@ -1,9 +1,11 @@
 /*
 1. Use form tag and onSubmit handler with event (e) .
-From e access e.target.[name of the input field]. value  
+From e access e.target.value[e is the name of the input field]  
 
-2. use individual state.
+2. Controlled Element: use individual state for each input field
 
-3.
+3. Controlled Element: One object in a state holding all the input fields value.
+
+4. Uncontrolled Element: useRef to create a reference to the element and access value by using like: nameRef.current.value
 
 */
