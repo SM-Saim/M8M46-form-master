@@ -6,6 +6,13 @@ import ReusableForm from "./components/ReusableForm/ReusableForm";
 // import StatefulForm from "./components/StatefulForm/StatefulForm";
 
 function App() {
+  const handleSignUpSubmit = (data) => {
+    console.log("sign up data", data);
+  };
+
+  const handleUpdateProfile = (data) => {
+    console.log("update profile", data);
+  };
   return (
     <>
       <h1>Vite + React</h1>
@@ -13,11 +20,22 @@ function App() {
       {/* <StatefulForm></StatefulForm> */}
       {/* <RefForm></RefForm> */}
       {/* <HookForm></HookForm> */}
-      <ReusableForm formTitle={"Sign Up"}></ReusableForm>
+      <ReusableForm formTitle={"Sign Up"} handleSubmit={handleSignUpSubmit}>
+        <div>
+          <h1>Sign Up</h1>
+          <p>This is sign up form</p>
+        </div>
+      </ReusableForm>
       <ReusableForm
         formTitle={"Create Account"}
         submitButtontext="Update"
-      ></ReusableForm>
+        handleSubmit={handleUpdateProfile}
+      >
+        <div>
+          <h1>Update Form</h1>
+          <p>This is update form</p>
+        </div>
+      </ReusableForm>
     </>
   );
 }
